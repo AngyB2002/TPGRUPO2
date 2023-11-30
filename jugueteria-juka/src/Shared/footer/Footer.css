@@ -1,0 +1,11 @@
+.footer{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #CDFAD5;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+}
+.footer p{
+    color: black;
+}

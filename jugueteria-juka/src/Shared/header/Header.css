@@ -1,0 +1,23 @@
+.header{
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 100%;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    background-color: #CDFAD5;
+}
+.centerElement{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button-login{
+    border-radius: 10%;
+    background-color: #FF8080;
+    color: white;
+    font-weight: bold;
+    padding: 4% 10%;
+}
+.button-login:hover{
+    scale: 1.1;
+}

@@ -1,0 +1,16 @@
+.nosotros-container{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-bottom: 5%;
+}
+section{
+    margin-bottom: 20px;
+}
+.subtitulos{
+    color: #CDFAD5;
+    text-align: center;
+}
+p{
+    line-height: 1.6;
+}

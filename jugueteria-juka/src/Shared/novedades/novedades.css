@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+}
+.info{
+    width: 100%;
+    text-align: center;
+    background:linear-gradient(#f6fdc3,#ffcf96);
+    box-shadow: 0px 10px 50px;
+   
+}
+.slider{
+    width: 100%;
+    margin-top: 25px;
+}
+
+.car{
+    width: 50%;
+    height: 300px;
+    padding: 25px;
+    border: solid  10px #e1d9d9;
+    border-radius: 20px;
+    transition: all 400ms ease;
+    background: linear-gradient(#cdfad5,#ffcf93,white);
+    text-align: center;
+}
+.car img{
+    border-radius: 20px;
+   
+}
+
+
+@media screen and (min-width: 1100px){
+    .slider{
+        width: 70%;
+        margin-inline: auto;
+        margin-top: 20px;
+    }
+    
+}

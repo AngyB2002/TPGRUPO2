@@ -1,12 +1,19 @@
-import React from 'react'
-import TituloSection from '../../Shared/tituloSection/TituloSection'
+
+import React from "react";
+import {Sucursal} from "../../Shared/seccion2/sucursal";
+import { Novedades } from "../../Shared/novedades/novedades-slider";
+import "./inicio.css";
 
 function Inicio() {
-  return(
-    <div>
-      <TituloSection titulo="Inicio"></TituloSection>
-    </div>
+ 
+  return (
+      <div className="seccion1-container">
+        <Novedades/>
+        <Sucursal/>     
+      </div>
+   
   )
 }
 
-export default Inicio
+export default Inicio;
+

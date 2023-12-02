@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import './Contactanos.css';
 import linkedin from '../../assets/linkedin.png';
 import MyImg from '../../Shared/MyImg/MyImg';
-import TituloSection from '../../Shared/tituloSection/TituloSection';
 
-export default function Contactanos(){
+
+export  function Contactanos(){
   const redSocial ={
     id: 1,
     altura: '60',
@@ -43,7 +43,6 @@ export default function Contactanos(){
   return(
     <div className='contenedorContactanos'>
       <div>
-        <TituloSection titulo='Contactenos' />
         <hr />
         <ul className='redes'>
           <li key={redSocial.id}>
@@ -122,3 +121,4 @@ export default function Contactanos(){
     </div>
   );
 }
+export default Contactanos;

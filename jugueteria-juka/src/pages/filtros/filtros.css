@@ -1,12 +1,11 @@
-
-.info{
+.info {
     width: 100%;
     text-align: center;
-    background:linear-gradient(#f6fdc3,#ffcf96);
+    background: linear-gradient(#f6fdc3, #ffcf96);
     box-shadow: 0px 10px 50px;
 }
 
-.contenedor{
+.contenedor {
     box-sizing: border-box;
     margin: 0%;
     width: 100%;
@@ -17,34 +16,38 @@
     flex-wrap: wrap;
     background-color: #f6fdc3;
 }
-.card{
+
+.card {
     width: 14rem;
-    height:20rem;
+    height: 20rem;
     margin: 20px;
-    box-shadow: 0px  20px 19px rgba(112, 110, 110, 0.7);
+    box-shadow: 0px 20px 19px rgba(112, 110, 110, 0.7);
     border-radius: 10px;
     transition: all 400ms ease;
     text-align: center;
 }
-.card img{
+
+.card img {
     width: 100%;
     height: 60%;
     overflow: hidden;
 }
-.card:hover{
-    box-shadow: 15px  25px 15px rgba(38, 37, 37, 0.9);
+
+.card:hover {
+    box-shadow: 15px 25px 15px rgba(38, 37, 37, 0.9);
     transform: translateY(-3%);
 }
-@media screen and (min-width: 800px){
-    .contenedor{
+
+@media screen and (min-width: 800px) {
+    .contenedor {
         width: 70%;
         margin-inline: auto;
         margin-top: 20px;
         border: solid 4px rgb(132, 123, 123);
-       
     }
-    .info{
+
+    .info {
         width: 100%;
     }
-    
+
 }

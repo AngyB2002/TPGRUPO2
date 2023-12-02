@@ -1,3 +1,4 @@
+
 import React from "react";
 import {Sucursal} from "../../Shared/seccion2/sucursal";
 import { Novedades } from "../../Shared/novedades/novedades-slider";
@@ -15,3 +16,4 @@ function Inicio() {
 }
 
 export default Inicio;
+

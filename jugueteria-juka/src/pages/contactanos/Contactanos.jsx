@@ -4,7 +4,7 @@ import linkedin from '../../assets/linkedin.png';
 import MyImg from '../../Shared/MyImg/MyImg';
 
 
-export default function Contactanos(){
+export  function Contactanos(){
   const redSocial ={
     id: 1,
     altura: '60',
@@ -121,3 +121,4 @@ export default function Contactanos(){
     </div>
   );
 }
+export default Contactanos;

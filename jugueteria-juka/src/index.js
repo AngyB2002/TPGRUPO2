@@ -20,7 +20,10 @@ root.render(
     <div className="vistas">
       <Rutas />
     </div>
-    <Footer/>
+    <div className='footer'>
+      <Footer/>
+    </div>
+    
   </BrowserRouter>
 )
 

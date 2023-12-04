@@ -11,6 +11,7 @@ export  function Contactanos(){
     ancho: '60',
     alt: 24,
     img: linkedin,
+    enlace: 'https://www.linkedin.com/in/juanma-arias',
   };
 
   const estadoInicial ={
@@ -46,7 +47,9 @@ export  function Contactanos(){
         <hr />
         <ul className='redes'>
           <li key={redSocial.id}>
-            <MyImg src={redSocial.img} altura={redSocial.altura} ancho={redSocial.ancho} alt={redSocial.alt} />
+            <a href={redSocial.enlace} target="_blank" rel="noopener noreferrer">
+              <MyImg src={redSocial.img} altura={redSocial.altura} ancho={redSocial.ancho} alt={redSocial.alt} />
+            </a>
           </li>
         </ul>
       </div>

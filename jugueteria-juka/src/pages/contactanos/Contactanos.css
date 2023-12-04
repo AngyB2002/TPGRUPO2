@@ -39,15 +39,17 @@
     width: 450px;
     resize: none;
 }
-.iconRedSocial{
-    height: 60px;
-    width: 60px;
-}
 .redes{
     display: flex;
     justify-content:center;
+    list-style: none;
 }
 .btnEnviarContenedor{
     display: flex;
     justify-content: flex-end;
+}
+hr{
+    height: 5px;
+    color: #333;
+    background-color: coral;
 }

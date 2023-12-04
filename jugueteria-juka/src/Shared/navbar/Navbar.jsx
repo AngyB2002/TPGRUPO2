@@ -36,6 +36,7 @@ export const NavBar = () => {
                     <ul>
                         <li ><Link to="/">Inicio</Link></li>
                         <li ><Link to="/about">Nosotros</Link></li>
+                        <li ><Link to="/Contactanos">Contáctanos</Link></li>
                         <li ><Link to="/todos">Ver todos</Link></li>
 
                         <li><button className="btn btn-secondary btn-sm dropdown-toggle " type="button" data-bs-toggle="dropdown" aria-expanded="false"  >

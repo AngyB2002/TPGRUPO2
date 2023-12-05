@@ -5,26 +5,19 @@ import './index.css';
 import { BrowserRouter } from 'react-router-dom';
 import Rutas from "./common/Rutas.jsx";
 import { Header } from "./Shared/header/Header.jsx";
-import { NavBar } from "./Shared/navbar/Navbar.jsx";
 import {Footer} from "./Shared/footer/Footer.jsx";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
-    <div className='header'>
+    <div className="header">
       <Header />
-    </div>
-    <div className='nav'>
-      <NavBar />
     </div>
     <div className="vistas">
       <Rutas />
     </div>
-    <div className='footer'>
+    <div className="footer">
       <Footer/>
     </div>
-    
   </BrowserRouter>
 )
-
-

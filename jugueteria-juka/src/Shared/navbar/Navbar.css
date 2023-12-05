@@ -4,10 +4,9 @@
   }
   
   .container-nav {
-    background: linear-gradient(#ff8080, rgb(208, 181, 181));
-    overflow: hidden;
-    width: 100%;
-    height: 60px;
+    width: 50%;
+    height: 50px;
+    
   }
   
   .contenedor-menu {
@@ -91,12 +90,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     margin: 5px 15px;
     cursor: pointer;
     transition: all 400ms ease;
-    border-radius: 20px;
+    border-radius: 10%;
     background-color: #ffacac;
   }
   

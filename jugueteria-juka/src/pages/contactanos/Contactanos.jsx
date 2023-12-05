@@ -44,6 +44,7 @@ export  function Contactanos(){
   return(
     <div className='contenedorContactanos'>
       <div>
+        <h2>!Estamos aquí para ayudarte!</h2>
         <hr />
         <ul className='redes'>
           <li key={redSocial.id}>

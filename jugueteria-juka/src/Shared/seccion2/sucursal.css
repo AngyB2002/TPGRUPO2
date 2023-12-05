@@ -36,13 +36,17 @@
     margin-top: 20px;
 }
 
-h3{
-    margin-top: 20px;
-}
+
 .imagen-sucursal {
     border: solid 3px rgb(77, 74, 74);
     margin-top: 20px;
     box-shadow: 20px  20px 19px rgba(57, 55, 55, 0.7);
+}
+.direccion{
+    margin-top: 40px;
+}
+h1{
+    margin-bottom: 40px;
 }
 
 @media screen and (min-width: 600px) {
@@ -71,7 +75,5 @@ h3{
         width: 50%;
         background-color: #cdfad5;
     }
-    h3{
-        margin-top: 40px;
-    }
+    
 }

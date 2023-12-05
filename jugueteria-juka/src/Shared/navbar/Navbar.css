@@ -8,7 +8,9 @@
     height: 50px;
     
   }
-  
+  .icono-menu{
+    background-color: #ffcf96;
+  }
   .contenedor-menu {
     position: fixed;
     top: 0;
@@ -96,7 +98,7 @@
     cursor: pointer;
     transition: all 400ms ease;
     border-radius: 10%;
-    background-color: #ffacac;
+    background-color: #CDFAD5;
   }
   
   .icono-menu:hover {

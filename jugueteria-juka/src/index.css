@@ -11,8 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
+.container-general{
+  margin: 0%;
+  padding: 0%;
+  
+}
 .vistas {
-  margin-top: 280px;
+  margin-top: 220px;
+ 
 }
 
 .nav {
@@ -23,10 +29,11 @@ code {
 }
 
 .header {
-  width: 100%;
-  height: 160px;
   position: fixed;
-  margin-top: -280px;
+  margin-top: -220px;
+  left: 0%;
+  width: 100%;
+  height: 200px;
   z-index: 2;
 
 }

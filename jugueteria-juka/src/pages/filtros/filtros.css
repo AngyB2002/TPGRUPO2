@@ -3,7 +3,7 @@
     height: 40px;
     text-align: center;
     background: linear-gradient(#f6fdc3, #ffcf96);
-    box-shadow: 0px 10px 50px;
+    box-shadow: 0px 20px 19px rgba(112, 110, 110, 0.7);
 }
 
 .contenedor {
@@ -16,9 +16,10 @@
     justify-content: center;
     flex-wrap: wrap;
     background-color: #f6fdc3;
+    margin-top: 20px;
 }
 
-.card {
+.card-filter {
     width: 14rem;
     height: 20rem;
     margin: 20px;
@@ -34,9 +35,16 @@
     overflow: hidden;
 }
 
-.card:hover {
+.card-filter:hover {
     box-shadow: 15px 25px 15px rgba(38, 37, 37, 0.9);
     transform: translateY(-3%);
+}
+.btn-warning a{
+    text-decoration: none;
+    color: black;
+}
+.btn-warning:hover{
+    background-color: #ff8080;
 }
 
 @media screen and (min-width: 800px) {

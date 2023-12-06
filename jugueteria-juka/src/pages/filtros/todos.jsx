@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
  import "./filtros.css"
 
  function Todos() {
@@ -19,7 +20,7 @@ import React, { useState, useEffect } from "react";
             }
         }
         fetchDatos();
-    }, [])
+    }, [productos])
     if (loading) {
         return <p>Cargando...</p>;
     }
@@ -34,14 +35,13 @@ import React, { useState, useEffect } from "react";
                 { productos
                 .map((prod) => (
                     <div key={prod.id}
-                        className="card" style={{ width: "14rem" }}>
+                        className="card card-filter" style={{ width: "14rem" }}>
                         <img src={prod.foto} className="card-img-top" alt="..." />
                         <div className="card-body">
                             <h5 className="card-title">{prod.nombre}</h5>
                             <p className="card-text">{prod.categoria}</p>
-                            <a href="#" className="btn btn-warning">
-                               Ver
-                            </a>
+                            <button className="btn btn-warning"> <Link to={`/details/${prod.id}/${prod.categoria}`}>Ver mas</Link>
+                            </button>
                         </div>
                     </div>
                 ))}

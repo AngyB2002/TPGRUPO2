@@ -6,6 +6,9 @@ import About from '../pages/about/About';
 import Login from '../pages/login/Login';
 import Todos from "../pages/filtros/todos";
 import FiltroCateg  from "../pages/filtros/filtroCateg";
+import ProductsDetails from "../pages/productDetails/productsDetails";
+
+
 export function Rutas() {
   return (
     <div>
@@ -16,6 +19,8 @@ export function Rutas() {
         <Route path='/login' element={<Login/>}/>
         <Route path='/todos' element={<Todos/>}/>
         <Route path='/filtro/:categoria' element={<FiltroCateg/>}/>
+        <Route path='/details/:idProd/:categoria' element={<ProductsDetails/>}/>
+
     </Routes>
   </div>
   )

@@ -1,0 +1,36 @@
+.container-details{
+    width: 80%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-inline: auto;
+}
+
+.card-details{
+    width: 100%;
+    height: 100%;
+   padding:40px 30px;
+   text-align: center;
+   background:linear-gradient(bisque,#f6fdc3,bisque) ;
+   margin-top: 20px;
+}
+.card-details img{
+    border: solid 6px rgb(160, 155, 155);
+    height: 65%;
+}
+.card-contain{
+    height: 35%;
+}
+
+@media screen and (min-width: 800px) {
+    .container-details{
+        width: 70%;
+        height: 800px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-inline: auto;
+    }
+ 
+}

@@ -1,32 +1,36 @@
 import React, { useState, useEffect } from "react";
 import "./filtros.css";
-import { useParams } from 'react-router-dom';//Esto sirve para obtener parametro de la URL de categoria.
+import { useParams } from 'react-router-dom';
 import { Link } from "react-router-dom";
+
+const API_URL = "https://65577ba4bd4bcef8b612bc04.mockapi.io/producto";
 
 function FiltroCateg(){
     const { categoria } = useParams();
     const [loading, setLoading] = useState(true);
     const [productos, setProductos] = useState([]);
+
     useEffect(() =>{
         const fetchDatos = async () =>{
-            try{
-                const response = await fetch("https://65577ba4bd4bcef8b612bc04.mockapi.io/producto");
+            try {
+                const response = await fetch(API_URL);
                 const datos = await response.json();
-                setLoading(false)
+                setLoading(false);
                 setProductos(datos);
-            }catch (error){
-                console.log(error)
+            } catch (error) {
+                console.log(error);
             }
-        }
+        };
         fetchDatos();
-    }, [])
+    }, []);
+
     if (loading){
         return <p>Cargando...</p>;
     }
 
     const prodFiltrados = (categoria) =>{
-        return productos.filter((prod) => prod.categoria === categoria|| prod.edad===categoria)
-    }
+        return productos.filter((prod) => prod.categoria === categoria || prod.edad === categoria);
+    };
 
     const view ={
         "Montessori": { filtro: () => prodFiltrados("Montessori"), rango: "Montessori" },
@@ -36,8 +40,8 @@ function FiltroCateg(){
         "2": { filtro: () => prodFiltrados(2), rango: "3-6 Meses" },
         "3": { filtro: () => prodFiltrados(3), rango: "6-12 Meses" },
         "4": { filtro: () => prodFiltrados(4), rango: "+1 Año" },
-        "5": { filtro: () => prodFiltrados(5), rango: "+3 Años" }
-    }
+        "5": { filtro: () => prodFiltrados(5), rango: "+3 Años" },
+    };
 
     const result = view[categoria] ? view[categoria].filtro() : [];
     const rangoMostrado = view[categoria] ? view[categoria].rango : "";
@@ -50,21 +54,19 @@ function FiltroCateg(){
 
             <div className="contenedor">
                 {result.map((prod) => (
-                    <div key={prod.id}
-                        className="card card-filter">
+                    <div key={prod.id} className="card card-filter">
                         <img src={prod.foto} className="card-img-top" alt="..." />
                         <div className="card-body">
                             <h5 className="card-title">{prod.nombre}</h5>
                             <p className="card-text">{prod.categoria}</p>
-                            <button className="btn btn-warning"> <Link to={`/details/${prod.id}/${categoria}`}>Ver mas</Link>
+                            <button className="btn btn-warning">
+                                <Link to={`/details/${prod.id}/${categoria}`}>Ver mas</Link>
                             </button>
                         </div>
                     </div>
                 ))}
-
             </div>
-
         </>
-    )
+    );
 }
 export default FiltroCateg;

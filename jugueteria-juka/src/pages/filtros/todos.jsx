@@ -1,20 +1,20 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
- import "./filtros.css"
+import "./filtros.css"
 
- function Todos() {
+function Todos(){
     const [productos, setProductos] = useState([]);
     const [loading, setLoading] = useState(true);
     
-    useEffect(() => {
-        const fetchDatos = async () => {
-            try {
+    useEffect(() =>{
+        const fetchDatos = async () =>{
+            try{
                 const response = await fetch("https://65577ba4bd4bcef8b612bc04.mockapi.io/producto");
                 const datos = await response.json();
                 
                 setProductos(datos)
-                
                 setLoading(false);
+
             } catch (error) {
                 console.log(error)
             }
@@ -25,7 +25,7 @@ import { Link } from "react-router-dom";
         return <p>Cargando...</p>;
     }
    
-    return (
+    return(
         <>
             <div className="info">
                 <h3>¡ Amplia variedad !</h3>
@@ -45,9 +45,7 @@ import { Link } from "react-router-dom";
                         </div>
                     </div>
                 ))}
-
             </div>
-
         </>
     )
 }

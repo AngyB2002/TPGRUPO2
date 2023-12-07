@@ -2,28 +2,26 @@ import React, { useState, useRef, useEffect } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 
-export const NavBar = () => {
+export const NavBar = () =>{
 
     const [menuAbierto, setMenuAbierto] = useState(false);
     const menuRef = useRef(null);
-    const manejarAlternarMenu = () => {
+    const manejarAlternarMenu = () =>{
         setMenuAbierto(!menuAbierto);
     };
-    const handleClickFuera = (event) => {
-        if (menuRef.current && !menuRef.current.contains(event.target)) {
+    const handleClickFuera = (event) =>{
+        if (menuRef.current && !menuRef.current.contains(event.target)){
             setMenuAbierto(false);
         }
     };
-    useEffect(() => {
+    useEffect(() =>{
         document.addEventListener('mousedown', handleClickFuera);
-        return () => {
+        return () =>{
             document.removeEventListener('mousedown', handleClickFuera);
         };
     }, []);
 
-
-
-    return (
+    return(
         <div className="container-nav">
             <div className="icono-menu" onClick={manejarAlternarMenu}>
                 <span className={`material-symbols-outlined ${menuAbierto ? 'abierto' : ''}`}>
@@ -68,4 +66,3 @@ export const NavBar = () => {
     );
 };
 export default NavBar;
-

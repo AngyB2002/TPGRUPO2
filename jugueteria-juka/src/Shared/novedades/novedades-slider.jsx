@@ -3,9 +3,10 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./novedades.css";
-export function Novedades() {
+
+export function Novedades(){
     
-    const sliderSettings = {
+    const sliderSettings ={
       dots: true,
       infinite: true,
       speed: 1000,
@@ -41,9 +42,8 @@ export function Novedades() {
       ],
     };
 
-    return (
+    return(
         <>
-        
         <div className="info">
           <h3>¡Nuestras novedades!</h3>
         </div>

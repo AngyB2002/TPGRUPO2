@@ -6,7 +6,6 @@
     align-items: center;
     margin-inline: auto;
 }
-
 .card-details{
     width: 100%;
     height: 100%;
@@ -22,7 +21,6 @@
 .card-contain{
     height: 35%;
 }
-
 @media screen and (min-width: 800px) {
     .container-details{
         width: 70%;

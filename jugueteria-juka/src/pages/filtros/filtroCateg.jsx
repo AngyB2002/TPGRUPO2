@@ -3,34 +3,32 @@ import "./filtros.css";
 import { useParams } from 'react-router-dom';//Esto sirve para obtener parametro de la URL de categoria.
 import { Link } from "react-router-dom";
 
- function FiltroCateg() {
+function FiltroCateg(){
     const { categoria } = useParams();
     const [loading, setLoading] = useState(true);
     const [productos, setProductos] = useState([]);
-    useEffect(() => {
-        const fetchDatos = async () => {
-            try {
+    useEffect(() =>{
+        const fetchDatos = async () =>{
+            try{
                 const response = await fetch("https://65577ba4bd4bcef8b612bc04.mockapi.io/producto");
                 const datos = await response.json();
                 setLoading(false)
                 setProductos(datos);
-            } catch (error) {
+            }catch (error){
                 console.log(error)
             }
         }
         fetchDatos();
     }, [])
-    if (loading) {
+    if (loading){
         return <p>Cargando...</p>;
     }
 
-    const prodFiltrados = (categoria) => {
+    const prodFiltrados = (categoria) =>{
         return productos.filter((prod) => prod.categoria === categoria|| prod.edad===categoria)
     }
 
-
-   
-    const view = {
+    const view ={
         "Montessori": { filtro: () => prodFiltrados("Montessori"), rango: "Montessori" },
         "Didactico": { filtro: () => prodFiltrados("Didactico"), rango: "Didactico" },
         "Otros": { filtro: () => prodFiltrados("Otros"), rango: "Otros" },
@@ -39,13 +37,12 @@ import { Link } from "react-router-dom";
         "3": { filtro: () => prodFiltrados(3), rango: "6-12 Meses" },
         "4": { filtro: () => prodFiltrados(4), rango: "+1 Año" },
         "5": { filtro: () => prodFiltrados(5), rango: "+3 Años" }
-
     }
 
     const result = view[categoria] ? view[categoria].filtro() : [];
     const rangoMostrado = view[categoria] ? view[categoria].rango : "";
 
-    return (
+    return(
         <>
             <div className="info">
                 <h3>{rangoMostrado} </h3>

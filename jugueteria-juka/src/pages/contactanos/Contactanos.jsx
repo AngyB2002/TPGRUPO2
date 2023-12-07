@@ -3,7 +3,6 @@ import './Contactanos.css';
 import linkedin from '../../assets/linkedin.png';
 import MyImg from '../../Shared/MyImg/MyImg';
 
-
 export  function Contactanos(){
   const redSocial ={
     id: 1,

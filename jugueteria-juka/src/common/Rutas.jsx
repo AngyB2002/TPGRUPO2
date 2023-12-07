@@ -8,11 +8,10 @@ import Todos from "../pages/filtros/todos";
 import FiltroCateg  from "../pages/filtros/filtroCateg";
 import ProductsDetails from "../pages/productDetails/productsDetails";
 
-
-export function Rutas() {
-  return (
+export function Rutas(){
+  return(
     <div>
-    <Routes >
+      <Routes>
         <Route path='/' element={<Inicio/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/contactanos' element={<Contactanos/>}/>
@@ -20,10 +19,8 @@ export function Rutas() {
         <Route path='/todos' element={<Todos/>}/>
         <Route path='/filtro/:categoria' element={<FiltroCateg/>}/>
         <Route path='/details/:idProd/:categoria' element={<ProductsDetails/>}/>
-
-    </Routes>
-  </div>
+      </Routes>
+    </div>
   )
 }
-
 export default Rutas

@@ -5,7 +5,7 @@ import MyImg from '../MyImg/MyImg';
 import { Link } from 'react-router-dom';
 import Navbar from '../navbar/Navbar';
 
-export  function Header(){
+export function Header(){
   return(
   <div className='container-header'>
     <div className='header1'>

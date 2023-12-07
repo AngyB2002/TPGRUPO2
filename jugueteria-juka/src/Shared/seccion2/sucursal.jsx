@@ -1,7 +1,8 @@
 import React from "react";
 import "./sucursal.css"
-export const Sucursal = () => {
-    return (
+
+export const Sucursal = () =>{
+    return(
         <div className="seccion2">
             <div className="container-infografia">
                 <img src="/Infografía Valores Collage Café y Beige.png" alt="" />

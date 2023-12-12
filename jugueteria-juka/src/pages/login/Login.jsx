@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import './LoginForm.css';
 
@@ -12,6 +13,7 @@ const LoginForm = () =>{
   });
 
   const [alerta, setAlerta] = useState('');
+  const navigate = useNavigate(); 
 
   const manejarCambioDeEntrada = (event) =>{
     setDatos({
@@ -26,28 +28,30 @@ const LoginForm = () =>{
       setAlerta('');
     }, 2000);
   };
-  
+
   const verificarUsuario = async (email, contraseña) =>{
-    try{
+    try {
       const response = await fetch(API_URL);
 
-      if (!response.ok){
-        throw new Error('Error al obtener usuarios');
-      }
+    if (!response.ok) {
+      throw new Error('Error al obtener usuarios');
+    }
 
-      const usuariosPermitidos = await response.json();
+    const usuariosPermitidos = await response.json();
 
-      return usuariosPermitidos.some(
-        (usuario) => usuario.email === email && usuario.contrasena === contraseña
-      );
-      } catch (error){
-        console.error('Error al verificar usuario:', error);
-        throw error; 
-      }
-  };  
+    console.log('Usuarios obtenidos de la API:', usuariosPermitidos);
+
+    return usuariosPermitidos.some(
+      (usuario) => usuario.email === email && usuario.contrasena === contraseña
+    );
+    } catch (error) {
+      console.error('Error al verificar usuario:', error);
+      throw error;
+    }
+  };
 
   const manejarLogin = async () =>{
-    try{
+    try {
       if (datos.email === '' || datos.password === ''){
         return false;
       }
@@ -56,10 +60,20 @@ const LoginForm = () =>{
         return false;
       }
 
-      return await verificarUsuario(datos.email, datos.password);
-    } catch (error){
+      const loginExitoso = await verificarUsuario(datos.email, datos.password);
+
+      if (loginExitoso) {
+        mostrarAlerta('Inicio de sesión exitoso.');
+
+        navigate('/abm');
+      } else {
+        mostrarAlerta('Credenciales de inicio de sesión incorrectas.');
+      }
+
+      return loginExitoso;
+    } catch (error) {
       console.error('Error al manejar el inicio de sesión:', error);
-      return false; 
+      return false;
     }
   };
 
@@ -67,13 +81,7 @@ const LoginForm = () =>{
     e.preventDefault();
 
     try{
-      const loginExitoso = await manejarLogin();
-
-      if (loginExitoso){
-        mostrarAlerta('Inicio de sesión exitoso.');
-      } else{
-        mostrarAlerta('Credenciales de inicio de sesión incorrectas.');
-      }
+      await manejarLogin();
     } catch (error){
       console.error('Error al enviar datos:', error);
     }
@@ -85,6 +93,7 @@ const LoginForm = () =>{
         <h2 className="loginTitulo">Iniciar Sesión</h2>
         {alerta && <div className="alerta">{alerta}</div>}
         <form className="login-form" id="login-form" onSubmit={enviarDatos}>
+
           <label htmlFor="email">
             <i className="fas fa-user"></i>
           </label>
@@ -98,6 +107,7 @@ const LoginForm = () =>{
             required
             autoComplete="email"
           />
+
           <label htmlFor="password">
             <i className="fas fa-lock"></i>
           </label>
@@ -111,6 +121,7 @@ const LoginForm = () =>{
             required
             autoComplete="current-password"
           />
+
           <div className="captcha-container">
             <input
               type="checkbox"
@@ -122,7 +133,11 @@ const LoginForm = () =>{
             />
             <label htmlFor="captcha-checkbox">No soy un robot</label>
           </div>
-          <button type="submit">Ingresar</button>
+
+          <button type="submit">
+            Ingresar
+          </button>
+          
         </form>
       </div>
     </div>

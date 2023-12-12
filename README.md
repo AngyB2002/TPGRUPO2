@@ -79,4 +79,4 @@ Durante el desarrollo del proyecto Juka, se adquirió una valiosa experiencia en
 ## API's Utilizadas en el Proyecto
 
 - Utilización de MockApi para almacenar los pares de usuario/contraseña válidos: [Usuarios API](https://655e9843879575426b43aa94.mockapi.io/api/v1/usuarios)
-- Utilización de MockApi para almacenar los productos: [Productos API](https://65577ba4bd4bcef8b612bc04.mockapi.io producto)
+- Utilización de MockApi para almacenar los productos: [Productos API](https://65577ba4bd4bcef8b612bc04.mockapi.io/producto)
